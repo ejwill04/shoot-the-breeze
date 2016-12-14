@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool",
+    "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
   },
@@ -36,6 +36,7 @@
     "escape-html": "^1.0.3",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.2.2",
