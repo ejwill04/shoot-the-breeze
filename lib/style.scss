@@ -30,7 +30,7 @@ input {
   font-size: $barFontSize;
   color: $barBackground;
   height: 57%;
-  width: 67%;
+  width: 70%;
   margin-left: 10px;
   border-radius: 5px;
   border: none;
@@ -80,6 +80,8 @@ input {
 
 .charCount {
   color: #fff;
+  width: 35px;
+  text-align: center;
   margin: 0 20px;
   font-size: $barFontSize;
 }
