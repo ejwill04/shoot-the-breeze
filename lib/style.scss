@@ -1,32 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 $messagebackground: #fff;
 $ridiculous: cursive;
-$filterBar: #34495e;
+$barBackground: #34495e;
 $filterField: #d8d8d8;
+$submitBtn: #2ecc71;
+$clearBtn: #e74c3c;
 $allFont: "Fira Sans", sans-serif;
+$barHeight: 60px;
+$barFontSize: 20px;
 
 body {
   font-family: $allFont;
 }
 
+.application {
+  height: 500px;
+}
+
+button {
+  color: $messagebackground;
+  border: none;
+  position: relative;
+  height: 60%;
+  border-radius: 5px;
+}
+
 input {
   background-color: $filterField;
-  font-size: 15px;
-  color: $filterBar;
+  font-size: $barFontSize;
+  color: $barBackground;
+  height: 57%;
+  width: 67%;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 ::-webkit-input-placeholder {
-  color: $filterBar;
+  color: $barBackground;
+  text-indent: 7px;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  color: $filterBar;
+  color: $barBackground;
+  text-indent: 7px;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  color: $filterBar;
+  color: $barBackground;
+  text-indent: 7px;
 }
 
 :-ms-input-placeholder {
-  color: $filterBar;
+  color: $barBackground;
+  text-indent: 7px;
+}
+
+.messageInputBar {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  background-color: $barBackground;
+  height: $barHeight;
+}
+
+.submitBtn {
+  background-color: $submitBtn;
+  font-size: 17px;
+  width: 10%;
+  margin-right: 10px;
+  &:disabled { background-color: #95a5a6}
+}
+
+.clearBtn {
+  background-color: $clearBtn;
+  font-size: 17px;
+  width: 10%;
+}
+
+.charCount {
+  color: #fff;
+  margin: 0 20px;
+  font-size: $barFontSize;
 }
