@@ -68,6 +68,13 @@ input {
   position: relative;
 }
 
+.logInBar {
+  display: flex;
+  align-items: center;
+  background-color: $filterField;
+  height: $barHeight;
+}
+
 .sortBtn {
   background-color: $sortBtn;
   font-size: $barFontSize;
@@ -108,7 +115,7 @@ input {
   margin: 0 10px;
 }
 
-.submitBtn {
+.submitBtn, .logInBtn, .clearBtn {
   background-color: $submitBtn;
   font-size: 17px;
   width: $btnWidth;
@@ -116,10 +123,12 @@ input {
   &:disabled { background-color: #95a5a6}
 }
 
+.logInBtn {
+  margin-left: 10px;
+}
+
 .clearBtn {
   background-color: $clearBtn;
-  font-size: 17px;
-  width: $btnWidth;
 }
 
 .charCount {
