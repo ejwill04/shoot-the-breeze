@@ -33,7 +33,7 @@ input {
   font-size: $barFontSize;
   color: $barBackground;
   height: 57%;
-  width: 70%;
+  width: 65%;
   margin-left: 10px;
   border-radius: 5px;
   border: none;
@@ -68,20 +68,37 @@ input {
   position: relative;
 }
 
+.filterBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.logInBar, .messageInputBar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.loggedInAs {
+  position: fixed;
+  width: 100%;
+  bottom: $barHeight;
+}
+
+.logInBar {
+  display: flex;
+  align-items: center;
+  background-color: $filterField;
+  height: $barHeight;
+}
+
 .sortBtn {
   background-color: $sortBtn;
   font-size: $barFontSize;
   margin-right: 10px;
   width: $btnWidth;
 }
-
-// .sortChronoBtn {
-//   right: 0;
-// }
-
-// .sortReverseChronoBtn {
-//   margin-left: 40%;
-// }
 
 .loggedInAs {
   background-color: #95a5a6;
@@ -99,16 +116,18 @@ input {
 }
 
 .searchInput {
-  width: 35%;
+  width: 45%;
+  margin-right: 10%;
 }
 
 .appName {
   color: #fff;
   font-size: $barFontSize;
   margin: 0 10px;
+  min-width: 175px;
 }
 
-.submitBtn {
+.submitBtn, .logInBtn, .clearBtn {
   background-color: $submitBtn;
   font-size: 17px;
   width: $btnWidth;
@@ -116,10 +135,12 @@ input {
   &:disabled { background-color: #95a5a6}
 }
 
+.logInBtn {
+  margin-left: 10px;
+}
+
 .clearBtn {
   background-color: $clearBtn;
-  font-size: 17px;
-  width: $btnWidth;
 }
 
 .charCount {
@@ -128,4 +149,8 @@ input {
   text-align: center;
   margin: 0 20px;
   font-size: $barFontSize;
+}
+
+.messageBody {
+  padding: $barHeight 0 $barHeight*2 0;
 }
