@@ -154,3 +154,22 @@ input {
 .messageBody {
   padding: $barHeight 0 $barHeight*2 0;
 }
+
+.message-displayName {
+  color: #2980b9;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0;
+}
+
+.message-id {
+ color: #9b59b6;
+ display: inline-block;
+ margin: 0 15px;
+}
+
+.message-input {
+  margin: 5px 15px 15px 15px;
+  width: 60%;
+  word-wrap: normal;
+}
