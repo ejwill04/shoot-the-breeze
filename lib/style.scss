@@ -13,7 +13,7 @@ body {
 .user-list{
   float: right;
   padding-top: $barHeight;
-  height: 200%;
+  height: 200vh;
   background-color: #ecf0f1;
   min-width: 250px;
 }
@@ -95,7 +95,7 @@ input {
 .inputFieldWrapper {
   width: 100%;
   height: 100%;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .logInBar, .messageInputBar {
@@ -207,6 +207,10 @@ input {
   word-wrap: normal;
 }
 
+.message-input {
+  margin-left: 15px;
+}
+
 @media screen and (max-width: 600px) {
 
   .filterBar {
@@ -229,6 +233,7 @@ input {
     position: absolute;
     top: 120px;
     width: 300px;
+    margin-bottom: 100px;
   }
 
   .searchInput {
@@ -258,7 +263,7 @@ input {
   }
 
   .inputBtnWrapper {
-    margin: 10px 0;
+    margin: 0px 0 10px;
     text-align: center;
   }
 
@@ -267,7 +272,7 @@ input {
   }
 
   .charCount {
-    margin: 0 10px;
+    margin: 10px;
     display: inline-block;
   }
 

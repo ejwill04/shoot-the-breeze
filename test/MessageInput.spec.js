@@ -19,13 +19,13 @@ describe('MessageInput', () => {
                           user={() => {}}/>);
     const input = wrapper.find('#message-input');
     input.simulate('change', { target: { value: 'hello world' } });
-    setTimeout(() => {
       expect(wrapper.state('input')).to.equal('hello world');
-       }, 1000);
   });
 
   it('renders a message on the page on click of submit button', () => {
-    const wrapper = mount(<MessageInput />);
+    const wrapper = mount(<MessageInput
+                          user={() => {}}
+                          displayMessage={() => {}}/>);
     const input = wrapper.find('#message-input');
     const submit = wrapper.find('.submitBtn');
 
@@ -35,18 +35,19 @@ describe('MessageInput', () => {
       expect(wrapper.text()).to.equal('hello world');
     }, 1000);
   });
-  //
-  // it('should clear the input field is clear is clicked', () => {
-  //   const wrapper = mount(<MessageInput />);
-  //   const input = wrapper.find('#message-input');
-  //   const clear = wrapper.find('.clearBtn');
-  //
-  //   input.simulate('change', {target: {value: 'hello world'}});
-  //   expect(wrapper.state('input')).to.equal('hello world');
-  //
-  //   clear.simulate('click');
-  //   expect(wrapper.state('input')).to.equal('');
-  // });
+
+  it('should clear the input field is clear is clicked', () => {
+    const wrapper = mount(<MessageInput
+                          user={() => {}}/>);
+    const input = wrapper.find('#message-input');
+    const clear = wrapper.find('.clearBtn');
+
+    input.simulate('change', {target: {value: 'hello world'}});
+    expect(wrapper.state('input')).to.equal('hello world');
+
+    clear.simulate('click');
+    expect(wrapper.state('input')).to.equal('');
+  });
   //
   // it('should count the characters in the input field', () => {
   //   const wrapper = mount(<MessageInput />);
