@@ -187,9 +187,9 @@ input {
 
 .charCount {
   color: #fff;
-  width: 35px;
+  width: 20%;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 0px;
   font-size: $barFontSize;
   display: inline-block;
 }
@@ -211,9 +211,9 @@ input {
  margin: 0 15px;
 }
 
-.message-input {
-  margin: 5px 15px 15px 15px;
-  width: 60%;
+#message-input {
+  margin: 5px 0px 20px 15px;
+  width: 70%;
   word-wrap: normal;
 }
 
