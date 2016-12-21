@@ -1,5 +1,5 @@
 import React from 'react';
-// import sinon from 'sinon';
+import sinon from 'sinon';
 
 import { shallow, mount, render } from 'enzyme';
 import { assert } from 'chai';
@@ -27,8 +27,8 @@ describe('Login', () => {
     assert.equal(wrapper.find('.usersName').length, 1);
   });
 
-  it('renders the users email if given a user', () => {
-    assert.equal(wrapper.find('.usersName').text(), ' noah ');
+  it.skip('renders the users email if given a user', () => {
+    assert.equal(wrapper.find('.userEmail').text(), ' noahpeden@gmail.com ');
   });
 
   it('should not have className of loggedInAs if no user', () => {
