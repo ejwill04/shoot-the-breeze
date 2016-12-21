@@ -186,6 +186,7 @@ input {
 
 .messageBody {
   padding: $barHeight 0 $barHeight*2 0;
+  height: auto;
 }
 
 .message-displayName {
