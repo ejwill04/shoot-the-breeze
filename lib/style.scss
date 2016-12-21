@@ -13,6 +13,7 @@ $barFontSize: 20px;
 
 body {
   font-family: $allFont;
+  margin: 0;
 }
 
 .logged-in-user {
@@ -22,8 +23,9 @@ body {
 .user-list{
   float: right;
   padding-top: $barHeight;
-  height: 90vh;
+  height: 200%;
   background-color: #ecf0f1;
+  min-width: 250px;
 }
 
 .user-list-btn, .usersHeader {
@@ -89,10 +91,21 @@ input {
   position: relative;
 }
 
+.sortButtonContainer {
+  height: 100%;
+  min-width: 180px;
+}
+
 .filterBar {
   position: fixed;
   width: 100%;
   top: 0;
+}
+
+.inputFieldWrapper {
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
 }
 
 .logInBar, .messageInputBar {
@@ -117,8 +130,15 @@ input {
 .sortBtn {
   background-color: $sortBtn;
   font-size: $barFontSize;
+  margin-top: 10px;
   margin-right: 10px;
   width: $btnWidth;
+}
+
+.inputBtnWrapper {
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
 }
 
 .loggedInAs {
@@ -138,7 +158,8 @@ input {
 
 .searchInput {
   width: 45%;
-  margin-right: 10%;
+  margin-right: 10px;
+  min-width: 150px;
 }
 
 .appName {
@@ -170,6 +191,7 @@ input {
   text-align: center;
   margin: 0 20px;
   font-size: $barFontSize;
+  display: inline-block;
 }
 
 .messageBody {
@@ -193,4 +215,78 @@ input {
   margin: 5px 15px 15px 15px;
   width: 60%;
   word-wrap: normal;
+}
+
+@media screen and (max-width: 600px) {
+
+  .filterBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    z-index: 1;
+  }
+
+  .messageInputBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .messageBody {
+    padding: 10px 0 10px 0;
+    position: absolute;
+    top: 120px;
+    width: 300px;
+  }
+
+  .searchInput {
+    margin: 0;
+    width: 80%
+  }
+
+  .loggedInAs {
+    visibility: hidden;
+  }
+
+  .user-list {
+    visibility: hidden;
+  }
+
+  .sortBtn {
+    display: inline-block;
+    flex-direction: row;
+    margin: 10px 5px;
+  }
+
+  .inputFieldWrapper {
+    width: 320px;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inputBtnWrapper {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .message-input {
+    width: 100%;
+  }
+
+  .charCount {
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  button, input {
+    height: 35px;
+  }
+
+  button {
+    min-width: 100px;
+  }
+
 }
