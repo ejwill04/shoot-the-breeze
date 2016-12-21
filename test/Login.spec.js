@@ -8,7 +8,7 @@ import {Login} from '../lib/components/Login';
 
 describe('Login', () => {
   const obj = {
-    user: { displayName: 'noah' },
+    user: { displayName: 'noah', email: 'noahpeden@gmail.com' },
     setUser: 'set',
     text: 'text',
     authorizer: 'authorize' };
@@ -17,7 +17,8 @@ describe('Login', () => {
     user={obj.user}
     setUser={obj.setUser}
     text={obj.text}
-    authorize={obj.authorize}/>);
+    authorize={obj.authorize}
+    email={obj.email}/>);
 
   it('returns a div with className of loggedInAs if given a user', () => {
     assert.equal(wrapper.find('.loggedInAs').length, 1);
@@ -28,7 +29,7 @@ describe('Login', () => {
   });
 
   it('renders the users email if given a user', () => {
-    assert.equal(wrapper.find('.usersName').text(), ' noah ');
+    assert.equal(wrapper.find('.userEmail').text(),  '(noahpeden@gmail.com)');
   });
 
   it('should not have className of loggedInAs if no user', () => {
