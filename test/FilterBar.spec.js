@@ -11,13 +11,14 @@ import {handleSort} from '../lib/components/Application';
 describe('FilterBar', () => {
   const wrapper = shallow(<FilterBar
     handleSort={() => {}}
+    placeholder='Filter'
   />);
 
   it('should have a class of filterBar', () => {
     assert.equal(wrapper.find('.filterBar').length, 1);
   });
 
-  it.skip('should have an input with a prop of value', () => {
+  it('should have an input with a prop of placeholder', () => {
     expect('.searchInput').to.have.property('placeholder');
   });
 
