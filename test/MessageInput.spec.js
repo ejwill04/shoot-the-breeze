@@ -15,7 +15,8 @@ describe('MessageInput', () => {
   });
 
   it('should change the state the messages being drafted', () => {
-    const wrapper = mount(<MessageInput />);
+    const wrapper = mount(<MessageInput
+                          user={() => {}}/>);
     const input = wrapper.find('#message-input');
     input.simulate('change', { target: { value: 'hello world' } });
     setTimeout(() => {

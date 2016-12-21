@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,700');
-$messagebackground: #fff;
-$ridiculous: cursive;
-$barBackground: #34495e;
-$filterField: #d8d8d8;
-$submitBtn: #2ecc71;
-$clearBtn: #e74c3c;
-$sortBtn: #3498db;
-$allFont: "Fira Sans", sans-serif;
-$barHeight: 60px;
-$btnWidth: 10%;
-$barFontSize: 20px;
+@import 'variables';
 
 body {
   font-family: $allFont;
